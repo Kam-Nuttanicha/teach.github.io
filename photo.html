@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuttanicha - ผลงานภาพถ่าย</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: calc(50% - 10px); /* เริ่มต้นด้วย 2 รูปในบรรทัดแรก */
+        }
+        .gallery img:nth-child(3), .gallery img:nth-child(4), .gallery img:nth-child(5) {
+            width: calc(33.33% - 10px); /* 3 รูปในบรรทัดที่สอง */
+        }
+        .gallery img:nth-child(6), .gallery img:nth-child(7) {
+            width: calc(50% - 10px); /* 2 รูปในบรรทัดที่สาม */
+        }
+        .gallery img:nth-child(8), .gallery img:nth-child(9), .gallery img:nth-child(10) {
+            width: calc(33.33% - 10px); /* 3 รูปในบรรทัดที่สี่ */
+        }
+        .gallery img:nth-child(13) {
+            width: calc(100% - 10px); /* รูปสุดท้ายขนาดเต็มแถว */
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px); /* 2 รูปต่อบรรทัดในหน้าจอที่เล็กกว่า */
+            }
+            .gallery img:nth-child(n) {
+                width: calc(50% - 10px); /* 2 รูปต่อบรรทัดในหน้าจอที่เล็กกว่า */
+            }
+            .gallery img:nth-child(13) {
+                width: 100%; /* รูปสุดท้ายขนาดเต็มแถวในหน้าจอที่เล็กกว่า */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%; /* 1 รูปต่อบรรทัดในหน้าจอที่เล็กที่สุด */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">หน้าแรก</a></li>
+                <li><a href="photo.html">ผลงานภาพถ่าย</a></li>
+                <li><a href="draw.html">ผลงานภาพวาด</a></li>
+                <li><a href="teach.html">การสอน</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="pic/002.jpg" alt="Image 1">
+            <img src="pic/01.PNG" alt="Image 2">
+            <img src="pic/14.PNG" alt="Image 3">
+            <img src="pic/g13.jpg" alt="Image 4">
+            <img src="pic/g01.jpg" alt="Image 5">
+            <img src="pic/015.PNG" alt="Image 6">
+            <img src="pic/g11.jpg" alt="Image 7">
+            <img src="pic/006.jpg" alt="Image 8">
+            <img src="pic/007.jpg" alt="Image 9">
+            <img src="pic/011.jpg" alt="Image 10">
+            <img src="pic/g10.jpg" alt="Image 11">
+            <img src="pic/009.jpg" alt="Image 12">
+            <img src="pic/016.png" alt="Image 13">
+        </div>
+    </main>
+</body>
+</html>

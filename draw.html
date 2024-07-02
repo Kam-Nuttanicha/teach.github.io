@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuttanicha - ผลงานภาพถ่าย</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img,
+        .gallery video {
+            width: calc(33.33% - 10px); /* ขนาดทั่วไปสำหรับรูปในบรรทัดอื่น */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .gallery img:first-child, .gallery video {
+            width: calc(100% - 10px); /* รูปแรกและวิดีโอเต็มบรรทัด */
+        }
+        .gallery img:nth-child(4), .gallery img:nth-child(5), .gallery img:nth-child(6), .gallery img:nth-child(7) {
+            width: calc(25% - 10px); /* 4 รูปในบรรทัดที่สาม */
+        }
+        .gallery img:nth-child(7) {
+            margin-top: 10px; /* รูปที่ 7 มีระยะห่างด้านบนเพื่อให้อยู่ใต้รูปที่ 4-6 */
+        }
+        @media (max-width: 768px) {
+            .gallery img, .gallery video {
+                width: calc(50% - 10px); /* 2 รูปต่อบรรทัดในหน้าจอที่เล็กกว่า */
+            }
+            .gallery img:first-child, .gallery video {
+                width: 100%; /* รูปแรกและวิดีโอเต็มบรรทัด */
+            }
+            .gallery img:nth-child(4), .gallery img:nth-child(5), .gallery img:nth-child(6), .gallery img:nth-child(7) {
+                width: calc(50% - 10px); /* 2 รูปในบรรทัดที่สามในหน้าจอที่เล็กกว่า */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img, .gallery video {
+                width: 100%; /* 1 รูปต่อบรรทัดในหน้าจอที่เล็กที่สุด */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">หน้าแรก</a></li>
+                <li><a href="photo.html">ผลงานภาพถ่าย</a></li>
+                <li><a href="draw.html">ผลงานภาพวาด</a></li>
+                <li><a href="teach.html">การสอน</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="pic/017.png" alt="Image 1">
+            <img src="pic/019.png" alt="Image 2">
+            <img src="pic/020.png" alt="Image 3">
+            <video controls>
+                <source src="pic/01.mp4" type="video/mp4">
+                เบราว์เซอร์ของคุณไม่รองรับการแสดงวิดีโอ
+            </video>
+            <img src="pic/app01.gif" alt="Image 4">
+            <img src="pic/app02.gif" alt="Image 5">
+            <img src="pic/app03.gif" alt="Image 6">
+            <img src="pic/app04.gif" alt="Image 7">
+            <img src="pic/app05.gif" alt="Image 8">
+            <img src="pic/app06.gif" alt="Image 9">
+        </div>
+    </main>
+</body>
+</html>
